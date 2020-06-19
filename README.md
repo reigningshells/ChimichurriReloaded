@@ -2,7 +2,7 @@
 
 This is a hastily put together PoC based entirely on the following blog post: https://itm4n.github.io/chimichurri-reloaded/
 
-Basically, it's another way to get SYSTEM with SeImpersonatePrivilege or SeAssignPrimaryTokenPrivilege.  Some caveats, since it uses HTTP it does require the target to have the WebClient service installed.  This is installed by default on workstations, but not on servers.  This PoC will check for the presence of WebClient, start it if it's not already started, and attempt to trigger the vulnerability.  There are probably better ways to trigger RasMan to attempt to write to the trace file but I chose to write out a phonebook with a VPN connection and leverqage rasdial to attempt to connect and trigger the attempted write.  As always, YMMV.
+Basically, it's another way to get SYSTEM with SeImpersonatePrivilege or SeAssignPrimaryTokenPrivilege.  Some caveats, since it uses HTTP it does require the target to have the WebClient service installed.  This is installed by default on workstations, but not on servers.  This PoC will check for the presence of WebClient, start it if it's not already started, and attempt to trigger the vulnerability.  There are probably better ways to trigger RasMan to attempt to write to the trace file but I chose to write out a phonebook with a VPN connection and leverage rasdial to attempt to connect and trigger the attempted write.  As always, YMMV.
 
 ## Usage
 
